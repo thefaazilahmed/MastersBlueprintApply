@@ -81,6 +81,19 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:32px 16p
 /* Fields */
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .row.full{grid-template-columns:1fr}
+
+@media(max-width:680px){
+  body{padding:0}
+  .shell{grid-template-columns:1fr;border-radius:0;min-height:100vh;}
+  .left{padding:28px 24px;}
+  .left h1{font-size:26px}
+  
+  
+  .left-bottom{display:none}
+  .right{padding:28px 20px 40px;}
+  .row{grid-template-columns:1fr}
+  .nav{padding-top:24px}
+}
 .field{display:flex;flex-direction:column;gap:5px}
 label{font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#555}
 label .opt{font-weight:400;color:#ccc;text-transform:none;letter-spacing:0;font-size:10px}
@@ -252,6 +265,11 @@ function s0(b){
   </div>
   <div class="row full">
     <div class="field"><label>LinkedIn <span class="opt">(optional)</span></label><input value="${S.linkedin}" oninput="S.linkedin=this.value" placeholder="linkedin.com/in/yourname"/></div>
+  </div>
+  <div class="row full">
+    <div class="field"><label>Resume <span class="opt">(optional - PDF or DOCX)</span></label>
+    <div class="upload-box"><input type="file" accept=".pdf,.docx" onchange="S.resume=this.files[0];document.getElementById('rfn').textContent=this.files[0]?.name||''"/>
+    <p>Click to upload or drag and drop</p><div class="fname" id="rfn">${S.resume?.name||''}</div></div></div>
   </div>
   ${nav(false)}`;
 }
