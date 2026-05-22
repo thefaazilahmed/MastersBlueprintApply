@@ -253,11 +253,6 @@ function s0(b){
   <div class="row full">
     <div class="field"><label>LinkedIn <span class="opt">(optional)</span></label><input value="${S.linkedin}" oninput="S.linkedin=this.value" placeholder="linkedin.com/in/yourname"/></div>
   </div>
-  <div class="row full">
-    <div class="field"><label>Resume <span class="opt">(optional - PDF or DOCX)</span></label>
-    <div class="upload-box"><input type="file" accept=".pdf,.docx" onchange="S.resume=this.files[0];document.getElementById('rfn').textContent=this.files[0]?.name||''"/>
-    <p>Click to upload or drag and drop</p><div class="fname" id="rfn">${S.resume?.name||''}</div></div></div>
-  </div>
   ${nav(false)}`;
 }
 
