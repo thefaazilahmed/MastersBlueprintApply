@@ -320,8 +320,20 @@ function validate(){
   return ok;
 }
 
+function flushTags(){
+  ["countries","universities"].forEach(function(id){
+    var i=document.getElementById("ti_"+id);
+    if(i&&i.value.trim()){
+      if(!S[id])S[id]=[];
+      S[id].push(i.value.trim());
+      i.value="";
+      rTags(id);
+    }
+  });
+}
+
 function go(d){
-  if(d>0&&!validate())return;
+  if(d>0){flushTags();if(!validate())return;}
   cur+=d;
   window.scrollTo({top:0,behavior:'smooth'});
   render();
