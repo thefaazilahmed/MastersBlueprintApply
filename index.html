@@ -19,53 +19,27 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:32px 16p
   box-shadow:0 20px 60px rgba(0,0,0,0.18);
 }
 
-/* LEFT PANEL */
 .left{
   background:#7a0a12;
   padding:48px 36px 36px;
   display:flex;
   flex-direction:column;
 }
-.left-content{
-  flex:1;
-}
+.left-content{flex:1}
 .left h1{
   font-family:'Cormorant Garamond',serif;
-  font-size:40px;
-  font-weight:500;
-  line-height:1.15;
-  color:#fff;
-  margin-bottom:20px;
+  font-size:40px;font-weight:500;line-height:1.15;color:#fff;margin-bottom:20px;
 }
 .left h1 em{font-style:italic;font-weight:400}
-.left-desc{
-  font-size:13px;
-  font-weight:300;
-  line-height:1.8;
-  color:rgba(255,255,255,0.6);
-  margin-bottom:36px;
-}
+.left-desc{font-size:13px;font-weight:300;line-height:1.8;color:rgba(255,255,255,0.6);margin-bottom:36px}
 .left-stats{display:flex;flex-direction:column;gap:18px}
 .stat{display:flex;align-items:flex-start;gap:12px}
 .stat-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,0.3);flex-shrink:0;margin-top:6px}
 .stat-text{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.65}
-.left-bottom{
-  font-size:11px;
-  color:rgba(255,255,255,0.22);
-  letter-spacing:0.5px;
-  padding-top:40px;
-  margin-top:auto;
-}
+.left-bottom{font-size:11px;color:rgba(255,255,255,0.22);letter-spacing:0.5px;padding-top:40px;margin-top:auto}
 
-/* RIGHT PANEL */
-.right{
-  background:#fff;
-  padding:44px 48px;
-  display:flex;
-  flex-direction:column;
-}
+.right{background:#fff;padding:44px 48px;display:flex;flex-direction:column}
 
-/* Progress */
 .progress-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
 .step-label{font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#7a0a12}
 .step-count{font-size:11px;color:#bbb;letter-spacing:0.5px}
@@ -74,26 +48,23 @@ body{display:flex;align-items:flex-start;justify-content:center;padding:32px 16p
 .progress-seg.done{background:#7a0a12}
 .progress-seg.active{background:#7a0a12;opacity:0.4}
 
-/* Section */
 .section-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:500;color:#1a1a1a;margin-bottom:5px}
 .section-sub{font-size:12px;color:#aaa;font-weight:300;margin-bottom:30px;letter-spacing:0.2px}
 
-/* Fields */
 .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .row.full{grid-template-columns:1fr}
 
 @media(max-width:680px){
   body{padding:0}
-  .shell{grid-template-columns:1fr;border-radius:0;min-height:100vh;}
-  .left{padding:28px 24px;}
+  .shell{grid-template-columns:1fr;border-radius:0;min-height:100vh}
+  .left{padding:28px 24px}
   .left h1{font-size:26px}
-  
-  
   .left-bottom{display:none}
-  .right{padding:28px 20px 40px;}
+  .right{padding:28px 20px 40px}
   .row{grid-template-columns:1fr}
   .nav{padding-top:24px}
 }
+
 .field{display:flex;flex-direction:column;gap:5px}
 label{font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:#555}
 label .opt{font-weight:400;color:#ccc;text-transform:none;letter-spacing:0;font-size:10px}
@@ -104,10 +75,9 @@ input,select,textarea{
   transition:border-color 0.2s,background 0.2s;width:100%;
 }
 input:focus,select:focus,textarea:focus{border-color:#7a0a12;background:#fff}
-input.err,select.err,textarea.err{border-color:#c0392b}
+input.err,select.err{border-color:#c0392b}
 textarea{resize:vertical;min-height:110px;line-height:1.6}
 
-/* Tags */
 .tags-wrap{
   min-height:42px;border:1px solid #e8e4df;border-radius:4px;
   background:#fbfaf9;padding:7px 10px;
@@ -119,32 +89,21 @@ textarea{resize:vertical;min-height:110px;line-height:1.6}
   background:#7a0a12;color:#fff;border-radius:3px;
   padding:2px 8px;font-size:11px;
   display:inline-flex;align-items:center;gap:6px;
-  white-space:nowrap;flex-shrink:0;
-  line-height:1.4;
+  white-space:nowrap;flex-shrink:0;line-height:1.4;
 }
-.tag button{background:none;border:none;color:rgba(255,255,255,0.6);cursor:pointer;font-size:12px;padding:0;line-height:1;margin-left:2px}
+.tag button{background:none;border:none;color:rgba(255,255,255,0.6);cursor:pointer;font-size:12px;padding:0;line-height:1}
 .tag button:hover{color:#fff}
 .tags-wrap input{border:none;padding:2px 4px;font-size:12px;flex:1;min-width:80px;outline:none;background:transparent;font-family:'Inter',sans-serif;font-weight:300}
 .hint{font-size:10px;color:#ccc;margin-top:3px}
 
-/* Upload */
-.upload-box{border:1px dashed #e0ddd8;border-radius:4px;padding:14px;text-align:center;cursor:pointer;background:#fbfaf9;position:relative;transition:border-color 0.2s}
-.upload-box:hover{border-color:#7a0a12}
-.upload-box input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;border:none;padding:0}
-.upload-box p{font-size:12px;color:#bbb;font-weight:300}
-.upload-box .fname{font-size:12px;color:#333;font-weight:400;margin-top:3px}
-
-/* Divider */
 .div{height:1px;background:#f2efeb;margin:18px 0}
 
-/* Nav */
 .nav{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:30px}
 .btn-back{background:none;border:1px solid #e4e0db;color:#aaa;font-family:'Inter',sans-serif;font-size:12px;font-weight:400;padding:9px 20px;border-radius:4px;cursor:pointer;transition:all 0.2s}
 .btn-back:hover{border-color:#999;color:#555}
 .btn-next{background:#7a0a12;border:none;color:#fff;font-family:'Inter',sans-serif;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:11px 28px;border-radius:4px;cursor:pointer;transition:background 0.2s}
 .btn-next:hover{background:#5e0810}
 
-/* Success */
 .success{text-align:center;padding:40px 0 10px}
 .success .ico{width:52px;height:52px;border:1.5px solid #7a0a12;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-size:20px;color:#7a0a12}
 .success h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:#1a1a1a;margin-bottom:12px}
@@ -157,7 +116,6 @@ textarea{resize:vertical;min-height:110px;line-height:1.6}
 <body>
 <div class="shell">
 
-  <!-- LEFT -->
   <div class="left">
     <div class="left-content">
       <h1>Your path to the <em>world's best</em> programs.</h1>
@@ -171,7 +129,6 @@ textarea{resize:vertical;min-height:110px;line-height:1.6}
     <div class="left-bottom">© 2026 Masters Blueprint</div>
   </div>
 
-  <!-- RIGHT -->
   <div class="right">
     <div class="progress-header">
       <span class="step-label" id="stepLabel">Basic Info</span>
@@ -188,7 +145,7 @@ const STEPS=['Basic Info','Admissions','Academic','Professional','Test Scores'];
 let cur=0;
 
 const S={
-  firstName:'',lastName:'',phone:'',email:'',linkedin:'',resume:null,
+  firstName:'',lastName:'',phone:'',email:'',linkedin:'',
   countries:[],universities:[],intake:'',targetDegree:'',
   ugUniversity:'',ugDegree:'',graduationStatus:'',ugGPA:'',ugScale:'4.0',
   workYears:'',workSummary:'',
@@ -266,17 +223,12 @@ function s0(b){
   <div class="row full">
     <div class="field"><label>LinkedIn <span class="opt">(optional)</span></label><input value="${S.linkedin}" oninput="S.linkedin=this.value" placeholder="linkedin.com/in/yourname"/></div>
   </div>
-  <div class="row full">
-    <div class="field"><label>Resume <span class="opt">(optional - PDF or DOCX)</span></label>
-    <div class="upload-box"><input type="file" accept=".pdf,.docx" onchange="S.resume=this.files[0];document.getElementById('rfn').textContent=this.files[0]?.name||''"/>
-    <p>Click to upload or drag and drop</p><div class="fname" id="rfn">${S.resume?.name||''}</div></div></div>
-  </div>
   ${nav(false)}`;
 }
 
 function s1(b){
-  const intakes=['Jan / Spring 2026','Sep / Fall 2026','Jan / Spring 2027','Sep / Fall 2027','Jan / Spring 2028','Sep / Fall 2028'];
-  const degrees=['Bachelor\'s','MIM (Master in Management)','MBA (Full-time)','MBA (Part-time / Executive)','MSc Finance','MSc Marketing','MSc Data / Analytics','Other Masters'];
+  const intakes=['Sep / Fall 2026','Jan / Spring 2027','Sep / Fall 2027','Jan / Spring 2028','Sep / Fall 2028'];
+  const degrees=["Bachelor's",'MIM (Master in Management)','MBA (Full-time)','MBA (Part-time / Executive)','MSc Finance','MSc Marketing','MSc Data / Analytics','Other Masters'];
   b.innerHTML=`
   <div class="section-title">Admissions Details</div>
   <div class="section-sub">Programs and universities you're targeting.</div>
@@ -286,7 +238,7 @@ function s1(b){
     <div class="field"><label>Target Intake</label>
       <select onchange="S.intake=this.value"><option value="">Select...</option>${intakes.map(i=>`<option ${S.intake===i?'selected':''} value="${i}">${i}</option>`).join('')}</select></div>
     <div class="field"><label>Target Degree</label>
-      <select id="sd" onchange="S.targetDegree=this.value"><option value="">Select...</option>${degrees.map(d=>`<option ${S.targetDegree===d?'selected':''} value="${d}">${d}</option>`).join('')}</select></div>
+      <select onchange="S.targetDegree=this.value"><option value="">Select...</option>${degrees.map(d=>`<option ${S.targetDegree===d?'selected':''} value="${d}">${d}</option>`).join('')}</select></div>
   </div>
   ${nav()}`;
 }
@@ -298,11 +250,11 @@ function s2(b){
   <div class="section-title">Academic Background</div>
   <div class="section-sub">Your undergraduate details.</div>
   <div class="row full"><div class="field"><label>Undergraduate University</label>
-    <input id="uu" value="${S.ugUniversity}" oninput="S.ugUniversity=this.value" placeholder="e.g. SRCC, VIT, Manipal, Christ University..."/></div></div>
+    <input value="${S.ugUniversity}" oninput="S.ugUniversity=this.value" placeholder="e.g. SRCC, VIT, Manipal, Christ University..."/></div></div>
   <div class="row full"><div class="field"><label>Degree & Major</label>
-    <input id="ud" value="${S.ugDegree}" oninput="S.ugDegree=this.value" placeholder="e.g. B.Com (Hons), B.Tech Computer Science..."/></div></div>
+    <input value="${S.ugDegree}" oninput="S.ugDegree=this.value" placeholder="e.g. B.Com (Hons), B.Tech Computer Science..."/></div></div>
   <div class="row full"><div class="field"><label>Graduation Status</label>
-    <select id="gs" onchange="S.graduationStatus=this.value"><option value="">Select...</option>${gradStatuses.map(s=>`<option ${S.graduationStatus===s?'selected':''} value="${s}">${s}</option>`).join('')}</select></div></div>
+    <select onchange="S.graduationStatus=this.value"><option value="">Select...</option>${gradStatuses.map(s=>`<option ${S.graduationStatus===s?'selected':''} value="${s}">${s}</option>`).join('')}</select></div></div>
   <div class="row">
     <div class="field"><label>GPA / Score</label>
       <input value="${S.ugGPA}" oninput="S.ugGPA=this.value" placeholder="e.g. 3.6 / 8.9 / 87%"/>
@@ -322,7 +274,7 @@ function s3(b){
     <select onchange="S.workYears=this.value"><option value="">Select range...</option>${years.map(y=>`<option ${S.workYears===y?'selected':''} value="${y}">${y}</option>`).join('')}</select></div></div>
   <div class="row full"><div class="field">
     <label>Companies & Roles</label>
-    <textarea id="ws" placeholder="e.g. Analyst @ Deloitte (Jun 2022 - Aug 2023), Marketing Intern @ Unilever (Jan 2022 - May 2022), Volunteer @ NGO Name..." oninput="S.workSummary=this.value">${S.workSummary}</textarea>
+    <textarea placeholder="e.g. Analyst @ Deloitte (Jun 2022 - Aug 2023), Marketing Intern @ Unilever (Jan 2022 - May 2022)..." oninput="S.workSummary=this.value">${S.workSummary}</textarea>
     <div class="hint">List all positions including internships and volunteer work</div>
   </div></div>
   ${nav()}`;
@@ -365,7 +317,6 @@ function validate(){
     req('fn',S.firstName);req('ln',S.lastName);req('ph',S.phone);req('em',S.email);
     if(S.email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(S.email)){const e=document.getElementById('em');if(e)e.classList.add('err');ok=false;}
   }
-  if(cur===2){}
   return ok;
 }
 
@@ -375,15 +326,16 @@ function go(d){
   window.scrollTo({top:0,behavior:'smooth'});
   render();
 }
+
 function submit(){
-  var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbygWh5Tf59jaq6DmKwN51k50cGcTuT6BgZO7eHxg4PSZcm3pGcaZMGcP3KwOX6ErK5lzQ/exec";
-  var btn = document.querySelector(".btn-next");
-  btn.textContent = "Submitting...";
-  btn.disabled = true;
-  fetch(SCRIPT_URL, { method: "POST", body: JSON.stringify(S) })
-  .then(function(r){ return r.json(); })
-  .then(function(){ cur=5; render(); })
-  .catch(function(){ cur=5; render(); });
+  var SCRIPT_URL="https://script.google.com/macros/s/AKfycbygWh5Tf59jaq6DmKwN51k50cGcTuT6BgZO7eHxg4PSZcm3pGcaZMGcP3KwOX6ErK5lzQ/exec";
+  var btn=document.querySelector(".btn-next");
+  btn.textContent="Submitting...";
+  btn.disabled=true;
+  fetch(SCRIPT_URL,{method:"POST",body:JSON.stringify(S)})
+  .then(function(r){return r.json();})
+  .then(function(){cur=5;render();})
+  .catch(function(){cur=5;render();});
 }
 
 render();
